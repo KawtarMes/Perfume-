@@ -1,0 +1,102 @@
+
+/*******************************************************/
+body{
+    margin:0;
+    scroll-behavior: smooth;
+    
+}
+
+
+.DesktopNavbar{
+    display: none;
+
+}
+
+    ul {
+  
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        list-style-type: none;
+        margin: 0;
+        padding: 14px 16px;
+        overflow: hidden;
+        background-color: #ECE5D1;
+  }
+
+  #Accueil{
+    display: grid;
+    justify-content: space-around;
+    height: 100Vh;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+  button{
+    border-radius: 50px;
+    background-color: #15616D;
+    color: white;
+    border: none;
+    padding: 10px;
+  }
+
+/***************************************DESKTOP**************************************************/
+@media only screen and (min-width: 500px) {
+    .DesktopNavbar{
+        display: block;
+    
+    }
+    .mobileFirst{
+        display: none;
+    }
+
+    body{
+        margin:0;
+        scroll-behavior: smooth;
+        
+    }
+
+    /*************Nav bar *************/
+ul {
+  
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ECE5D1;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #15616D;
+    color: white;
+  }
+  
+  .active {
+    color: #BC8340;
+    font-weight: bolder;
+  }
+  /*******************************Accueil************************************************/
+
+
+
+}
+
+
+  
