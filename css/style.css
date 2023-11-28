@@ -32,14 +32,121 @@ body{
     align-content: center;
     text-align: center;
 }
-
-  button{
-    border-radius: 50px;
+/*******button pour aller faire le quiz ********/
+  button#quizButton{
+    border-radius: 10px;
     background-color: #15616D;
     color: white;
     border: none;
     padding: 10px;
+    font-weight: bold;
   }
+/***************************************Barre de recherche**************************************************************/
+.Research{
+  border-radius: 50px;
+  background-color:#ECE5D1;
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  padding: 2%;
+}
+.researchContainer{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  border: none;
+  background-color: #ECE5D1;
+  width: 50%;
+}
+button#search{
+  background-color: #15616D;
+  border-radius: 50px;
+  border: none;
+  padding: 5%;
+}
+#searchIcon{
+  color: white;
+}
+/*****************liste container******************/
+
+.parfumListContainer{
+  display: grid;
+  justify-content: center;
+}
+  /********************************Card affichage parfum/article**********************************/
+  .card {
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Ajout d'un curseur pour indiquer que l'élément est cliquable */
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+
+  .card-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .card-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  .heart-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    color: #ff0000;
+  }
+/*** le bas de la card article */
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    padding: 2%;
+  }
+
+  .product-description {
+    display: none;
+    max-width: 600px;
+    margin: 20px;
+  }
+  /***********button lire plus***********/
+  .lirePlusBtn{
+    background-color: #BC8340;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 5%;
+    width: 100px;
+    font-weight: bold;
+  }
+/******************SECTION BLOG**************************************/
+
+
+
+
+
+
+
+
 
 /***************************************DESKTOP**************************************************/
 @media only screen and (min-width: 500px) {
@@ -83,7 +190,7 @@ ul {
     text-decoration: none;
   }
   
-  li a:hover:not(.active) {
+  ul li a:hover:not(.active) {
     background-color: #15616D;
     color: white;
   }
