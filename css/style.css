@@ -1,5 +1,5 @@
 
-/*******************************************************/
+/*********************************MOBILE FIRST**********************/
 body{
     margin:0;
     scroll-behavior: smooth;
@@ -14,14 +14,40 @@ body{
 @font-face {
   font-family: 'Lora';
   src: url('assets/fonts/Lora-Italic-VariableFont_wght.ttf') format('ttf'),
-       url('assets/fonts/Lora-VariableFont_wght.ttf') format('truetype');
+       /* url('assets/fonts/Lora-VariableFont_wght.ttf') format('truetype'); */
 }
-
-.DesktopNavbar{
+/*********************Navbar***************/
+.DesktopNavbar {
     display: none;
 
-}
 
+}
+#navVerticale {
+
+        position: sticky;
+        top: 0;
+        list-style-type: none;
+        margin: 0;
+        padding: 14px 16px;
+        overflow: hidden;
+        background-color: #ECE5D1;
+} 
+/*menu de navigation  qui s'affiche lorsu'on click sur le burger*/
+#menuMobile{
+  display: none;
+}
+#navVerticale li{
+   display: grid;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+  }
+  #navVerticale a{
+    text-decoration: none;   
+  }
+  #navVerticale a:visited{
+    color: black;
+  }
     ul {
   
         position: -webkit-sticky;
@@ -33,7 +59,7 @@ body{
         overflow: hidden;
         background-color: #ECE5D1;
   }
-
+/*///////////////////////////SECTION Accueil//////////////////////////::::*/
   #Accueil{
     display: grid;
     justify-content: space-around;
@@ -51,7 +77,10 @@ body{
     padding: 10px;
     font-weight: bold;
   }
-/***************************************Barre de recherche**************************************************************/
+/*/////////////////////////SECTION Catalogue////////////////////////////////////////:*/
+
+/**SECTION RESEARCH FILTER CONTAINER et barre de recherche*/
+
 .Research{
   border-radius: 50px;
   background-color:#ECE5D1;
@@ -59,6 +88,11 @@ body{
   justify-content: flex-end;
   width: 50%;
   padding: 2%;
+}
+.Research img{
+  width: 15px;
+  height: 10px;
+  aspect-ratio: 1/1;
 }
 .researchContainer{
  
@@ -80,7 +114,39 @@ button#search{
 #searchIcon{
   color: white;
 }
-/*****************liste (de parfum) container******************/
+
+/*div filterContainer*/
+
+.filterContainer{
+  margin: 1%;
+  border-radius: 35px;
+  background-color: #ECE5D1;
+  display: grid;
+  justify-content: center;
+  justify-items: start;
+  padding: 10%;
+  display: none;
+}
+.filterContainer form{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  
+}
+/*bouton pour appliquer les filtres*/
+.btnSectionSubmit{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.btnSectionSubmit button{
+  background-color: #15616D;
+  border-radius: 35px;
+  border: none;
+  padding: 10px;
+  color: white;
+  
+}
+/*****************liste (des parfums) container******************/
 
 .parfumListContainer{
   display: grid;
@@ -155,9 +221,47 @@ button#search{
     width: 100px;
     font-weight: bold;
   }
-/******************SECTION BLOG**************************************/
+/*/////////////////////////////SECTION BLOG//////////////////////////////////////:***/
 #Blog{
   padding: 1%;
+}
+
+
+/*/////////////////////////////SECTION Quiz//////////////////////////////////////:***/
+#Quiz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.quizContainer{
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 30px;
+  padding: 3%;
+  background: #ECE5D1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+h1{
+  font-size: xx-large;
+}
+.question{
+  font-weight: bolder;
+  font-size: x-large;
+}
+.Reponses{
+  width: 90%;
+}
+option{
+
+  padding: 3%;
+  margin: 7%;
+  border-radius: 20px;
+  background-color:white;
 }
 
 
@@ -167,8 +271,23 @@ button#search{
 
 
 
+
+/*/////////////////////////////SECTION Contact/////////////////////////////////////:***/
+
+
+
+
+/*/////////////////////////////SECTION MonProfil/////////////////////////////////////:***/
+
+
+
+
+
+
+
+
 /***************************************DESKTOP**************************************************/
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 900px) {
     .DesktopNavbar{
         display: block;
     
@@ -187,7 +306,7 @@ button#search{
 ul {
   
         position: -webkit-sticky;
-        position: sticky;
+        position: sticky; /*!!!!!!!tu peux faire fixed mais attention la tu prend les ul aussi du blog*/
         top: 0;
     
     list-style-type: none;
@@ -232,6 +351,13 @@ input{
   text-size-adjust: auto;
 }
 
+.filterContainer{
+  padding: 1%;
+}
+.filterContainer form{
+  width: 90%;
+} /*section filtres*/
+
 .parfumListContainer{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -240,3 +366,85 @@ input{
 
 
   
+
+
+
+
+
+/*///////////////////////////////TABLET////////////////////////*/
+@media only screen and (min-width:700px )and (max-width:900px){
+  .DesktopNavbar{
+    display: block;
+
+}
+.mobileFirst{
+    display: none;
+}
+
+body{
+    margin:0;
+    scroll-behavior: smooth;
+    
+}
+
+/*************Nav bar *************/
+ul {
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #ECE5D1;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+ul li a:hover:not(.active) {
+background-color: #15616D;
+color: white;
+}
+
+.active {
+color: #BC8340;
+font-weight: bolder;
+}
+/*******************************Accueil************************************************/
+
+/******************************Catalogue**************************************************/
+.Research{
+width: 40%;
+padding: 1%;
+}
+
+input{
+
+width: 50%;
+text-size-adjust: auto;
+}
+
+.filterContainer{
+padding: 1%;
+}
+.filterContainer form{
+width: 90%;
+} /*section filtres*/
+
+.parfumListContainer{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+} /*afficher les parfums en plusieurs colonnes  */
+}

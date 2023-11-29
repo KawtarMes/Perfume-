@@ -8,10 +8,11 @@
     <script src="js/recherchefiltree.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/index.js" defer></script>
+    <script src="js/quiz.js" defer></script>
     <title>Perfume </title>
 </head>
 <body>
-    <!-- ******************************NacvBar Accueil************************ -->
+    <!-- ******************************NavBar ************************ -->
     <nav >
         <ul class="DesktopNavbar">
             <li><a href="#Accueil" class="active">Accueil</a></li>
@@ -21,14 +22,26 @@
             <li><a href="#Contact">Contact</a></li>
             <li><a href="#MonProfil">Mon Profil</a></li>
         </ul>
-        <ul class="mobileFirst">
+        <ul class="mobileFirst" id="burger" > 
+            <!-- nav mobile first -->
             <li> 
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" ></i>
             </li>
         </ul>
+        <div class="navVerticale" id="menuMobile">
+            <ul id="navVerticale">  
+                <li><a href="#Accueil" >Accueil</li></a>
+                <li><a href="#Catalogue">Catalogue</a></li>
+                <li><a href="#Quiz">Quiz</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#MonProfil">Mon Profil</a></li></ul>
+        </div>
+      
  </nav>
-    <main>
-        <!--  Section accueil -->
+  
+        <!-- /////////////////////// Section accueil///////////////////////////////////: -->
+        <main>
         <section id="Accueil">
             <article>
                 <p>
@@ -43,29 +56,87 @@
             </button>
         </a> 
         </section>
-         <!--  Section quiz -->
-        <section id="Quiz"></section>
-         <!--  Section Catalogue -->
+         <!--  /////////////////////////////////////::Section Catalogue/////////// // -->
         <section id="Catalogue">
+            <section class="ResearchFilterContainer">
             <div class="researchContainer">
                 <div class="Research">
                     <input type="" placeholder="Recherche">
+                  
                     <button id="search" >
-                        <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+                        <img src="assets/images/dropdowArrow.png" >
+                        <!-- <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i> -->
                     </button>
+                
                 </div>
         </div>
+        <div class="filterContainer">
+            <h4>Famille olfactive</h4>
+            <form class="parFamille"> 
+                <input type="checkbox" id="Florale" name="Florale" value="Florale">
+                    <label for="Florale"> Florale</label>
+                <input type="checkbox" id="Boisée" name="Boisée" value="Boisée">
+                    <label for="Boisée">Boisée</label>
+                <input type="checkbox" id="Chyprée" name="Chyprée" value="Chyprée">
+                    <label for="Chyprée">Chyprée</label>
+                <input type="checkbox" id="Fruitée" name="Fruitée" value="Fruitée">
+                    <label for="Fruitée">Fruitée</label>
+            </form>
+            <h4>Notes</h4>
+            <form class="parNote">
+               
+                <input type="checkbox" id="Rose" value="Rose">
+                <label for="Rose">Rose</label>
+                <input type="checkbox" id="Musc" value="Musc">
+                <label for="Musc">Musc</label>
+                <input type="checkbox" id="Jasmin" value="Jasmin">
+                <label for="Jasmin">Jasmin</label>
+                <input type="checkbox" id="Vanille" value="Vanille">
+                <label for="Vanille">Vanille</label>
+                <input type="checkbox" id="Citron" value="Citron">
+                <label for="Citron">Citron</label>
+                <input type="checkbox" id="Fraise" value="Fraise">
+                <label for="Fraise">Fraise</label>
+                <input type="checkbox" id="Patchouli" value="Patchouli">
+                <label for="Patchouli">Patchouli</label>
+                <input type="checkbox" id="Café" value="Café">
+                <label for="Café">Café</label>
+                <input type="checkbox" id="Oud" value="Oud">
+                <label for="Oud">Oud</label>
+                <input type="checkbox" id="Iris" value="Iris">
+                <label for="Iris">Iris</label>
+            </form>
+            <div class="btnSectionSubmit">
+            <button id="submitFilter">appliquer</button>
+            </div>
+
+        </div>
+    </section>
 
             <!-- list affichage des  parfums -->
             <div class="parfumListContainer">
+                <!--j'injecte les parfums à partir du tableu d'objets PerfumeList-->
                 <div class="product-description">
                     <!-- Le contenu de la description du produit sera ajouté ici -->
                   </div>
                   
             </div>
         </section>
+          <!-- //////////////////////////////Section quiz ////////////////::::-->
+          <section id="Quiz">
+            <div class="quizContainer">
+                <h2>Quiz</h2>
+             
+                <div class="question" id="question">
+                    Question numèro 1
+                </div>
         
-         <!--  Section Blog -->
+                <div class="Reponses">
+                    <!--j'injecte les options reponses du js-->
+                </div>
+                
+          </section>
+         <!--  ////////////////////////Section Blog ////////////////////////////:-->
         <section id="Blog">
             <article>
                 <h2>Note Parfaite</h2>
