@@ -12,6 +12,8 @@ const perfumeList = [{
     favoris: true,
     src: "assets/images/chanel5.jpeg",
     genre: "femme",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam odit sint beatae, blanditiis voluptatibus ratione quos maiores id consequatur iure nobis voluptatem exercitationem impedit cupiditate voluptatum amet quaerat ut qui?",
+
 
 },
 {

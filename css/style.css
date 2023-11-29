@@ -3,9 +3,19 @@
 body{
     margin:0;
     scroll-behavior: smooth;
+
+ 
+}
+*{
+  font-family: 'Lora';
     
 }
 
+@font-face {
+  font-family: 'Lora';
+  src: url('assets/fonts/Lora-Italic-VariableFont_wght.ttf') format('ttf'),
+       url('assets/fonts/Lora-VariableFont_wght.ttf') format('truetype');
+}
 
 .DesktopNavbar{
     display: none;
@@ -70,13 +80,19 @@ button#search{
 #searchIcon{
   color: white;
 }
-/*****************liste container******************/
+/*****************liste (de parfum) container******************/
 
 .parfumListContainer{
   display: grid;
   justify-content: center;
 }
+
+.famillesOlfactive ul{ 
+  background-color: white;
+
+}
   /********************************Card affichage parfum/article**********************************/
+
   .card {
     max-width: 300px;
     border: 1px solid #ccc;
@@ -90,6 +106,7 @@ button#search{
   .card img {
     width: 100%;
     height: auto;
+   aspect-ratio: 1/1;
   }
 
   .card-content {
@@ -97,7 +114,7 @@ button#search{
   }
 
   .card-name {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 8px;
   }
@@ -139,7 +156,9 @@ button#search{
     font-weight: bold;
   }
 /******************SECTION BLOG**************************************/
-
+#Blog{
+  padding: 1%;
+}
 
 
 
@@ -201,8 +220,22 @@ ul {
   }
   /*******************************Accueil************************************************/
 
+/******************************Catalogue**************************************************/
+.Research{
+  width: 40%;
+  padding: 1%;
+}
 
+input{
+  
+  width: 50%;
+  text-size-adjust: auto;
+}
 
+.parfumListContainer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+} /*afficher les parfums en plusieurs colonnes  */
 }
 
 
