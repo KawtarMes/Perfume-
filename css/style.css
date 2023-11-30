@@ -250,9 +250,9 @@ button#search{
   align-items: center;
   width: 60%;
 }
-h1{
+/* h1{
   font-size: xx-large;
-}
+} */
 .question{
   font-weight: bolder;
   font-size: x-large;

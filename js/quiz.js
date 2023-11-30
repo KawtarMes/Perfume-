@@ -5,23 +5,23 @@
 
 let Questions = [
     {
-        question:"Quel type de fleur préférez-vous ?",
+        question:"Choisi la scenteur preferé parmi celles ci?",
         options:["Rose","Cèdre ","Pomme","Mousse de chêne"],
         },
     
     {
-        question:"Quel type de fleur préférez-vous ?",
+        question:"Choisi la scenteur preferé parmi celles ci?",
         options:["Muguet","Santal","Fraise","Patchouli"],
             },
         
     {
-        question:"Quel type de fleur préférez-vous ?",
+        question:"Choisi la scenteur preferé parmi celles ci?",
         options:["Jasmin ","Vétiver","Citron ","Bergamote"],
                 },
             
     {
-        question:"Quel type de fleur préférez-vous ?",
-        options:["Pivoine","Pin","Pêche",""],
+        question:"Choisi la scenteur preferé parmi celles ci?",
+        options:["Pivoine","Pin","Pêche","Labdanum"],
                     },
 ];
 
@@ -32,28 +32,53 @@ let Questions = [
 console.log(Questions);
 
 
-
-
 let currentQuestionIndex = 0;
+
 let score = 0;
+// objet pour associé valeur à sa clé , pour recuperer le nom
+let Florale = {score:0,name:"Florale"};
+let Boisée = {score:0,name:"Boisée"};
+let Fruitée = {score:0,name:"Fruitée"};
+let Chyprée = {score:0,name:"Chyprée"};
+// variable pour compter dedans
+// possible un switch
 
-// Function to check the user's answer and update the score
-function checkAnswer(selectedOption) {
-    const currentQuestion = Questions[currentQuestionIndex];
 
-    if (selectedOption === currentQuestion.reponse) {
-        score += 10; // incremente de 10 la barre
-        alert('YESS SSIR' ) // message reponse correcte
-    } else{
-        alert('Oupsie!Reponse pas correcte tu fera mieux à la prochaine ' );// message reponse fausse
+    // Function to check the user's answer and update the score
+    function checkAnswer(selectedOption) {
+        const currentQuestion = Questions[currentQuestionIndex];
 
-    }
-    // Actualiser l'affichage de la barre , label et niveau
-    const scoreContainer = document.querySelector('.score');
-    scoreContainer.innerHTML = `
-    <label for="score">Score:${score}%</label>
-    <progress id="file" max="100" value="${score}"></progress>
-`;
+        if (selectedOption === currentQuestion.options[0])
+        { 
+            Florale.score += 10; // incremente de 10 la var florale
+            // alert('florale ici' ) // 
+        } else if (selectedOption === currentQuestion.options[1]){
+            Boisée.score += 10 // increment la var boisée
+            // alert('boisée indeed ' );
+        }else if (selectedOption === currentQuestion.options[2]){
+            Fruitée.score += 10 // increment var fruitée
+            // alert('fruitée here')
+        }
+            else if (selectedOption === currentQuestion.options[3]){
+                Chyprée.score += 10 // incremente la var chyprée
+                // alert('chyprée')
+            };
+
+
+                    // fx pour comparer les valeurs des variable et trouvé la plus grande
+
+                    function resultatQuiz() {
+                        let categories = [Florale, Boisée, Fruitée, Chyprée];
+
+                        // Trouver la catégorie avec le score le plus élevé
+                        let highestCategory = categories.reduce((max, category) => max.score > category.score ? max : category, categories[0]);
+
+                        console.log(highestCategory.name);
+
+                        return highestCategory.name;
+                    }
+
+
 
     // passer à la question d'apres ou finir le jeux
     currentQuestionIndex++;
@@ -62,7 +87,7 @@ function checkAnswer(selectedOption) {
         updateQuestion(); // si <totalité des question je continue
     } else {
         // Fin du quiz avec les points
-        alert('Bravo ton score final est: ' + score);
+        alert('La famille olfactive pour toi est: ' + resultatQuiz());// recupere la categorie à partir de la fx resultat quiz
     }
 }
 
@@ -94,9 +119,5 @@ function checkAnswer(selectedOption) {
 
 // Initial question update
 updateQuestion();
-// // button pour reload la page et rejouer à nouveua
-// let joueEncore = document.createElement('button');
-
-// document.quizContainer.appendChild(joueEncore)
 
 
