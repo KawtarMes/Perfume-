@@ -29,10 +29,10 @@ let Questions = [
 
 
 
-console.log(Questions);
+// console.log(Questions);
 
 
-let currentQuestionIndex = 0;
+let currentQuestionIndex = 0; 
 
 let score = 0;
 // objet pour associé valeur à sa clé , pour recuperer le nom
@@ -44,7 +44,7 @@ let Chyprée = {score:0,name:"Chyprée"};
 // possible un switch
 
 
-    // Function to check the user's answer and update the score
+    // verifier en fx e la reponse et passer à la question suivante
     function checkAnswer(selectedOption) {
         const currentQuestion = Questions[currentQuestionIndex];
 
@@ -74,22 +74,33 @@ let Chyprée = {score:0,name:"Chyprée"};
                         let highestCategory = categories.reduce((max, category) => max.score > category.score ? max : category, categories[0]);
 
                         console.log(highestCategory.name);
-
+                     
                         return highestCategory.name;
+                 
                     }
+
+               
+          
 
 
 
     // passer à la question d'apres ou finir le jeux
     currentQuestionIndex++;
 
+    let quizResult;// rappeler la var dehors, le resultat du quiz
+    function setQuizResult(result) {
+        localStorage.setItem('quizResult', result);
+    }//stocker en localstorage
+    
+
     if (currentQuestionIndex < Questions.length) {
         updateQuestion(); // si <totalité des question je continue
     } else {
         // Fin du quiz avec les points
-        alert('La famille olfactive pour toi est: ' + resultatQuiz());// recupere la categorie à partir de la fx resultat quiz
+        quizResult = resultatQuiz(); // recupere la categorie à partir de la fx resultat quiz
+        setQuizResult(quizResult);// rappelle la fx
+        alert('La famille olfactive pour toi est: ' + quizResult);}
     }
-}
 
 // Mettre à jour les option correspondante à la question actuelle
     function updateQuestion() {
@@ -119,5 +130,44 @@ let Chyprée = {score:0,name:"Chyprée"};
 
 // Initial question update
 updateQuestion();
+
+       
+     
+// Mettre le resultat du quiz dans la section mon profil
+//quand je refresh la page 
+document.addEventListener("DOMContentLoaded", function () {
+  
+         // Recupere le resultat du quiz dans localStorage
+         let storedResult = localStorage.getItem('quizResult');
+         let monProfil = document.getElementById("FamilleOlfPref");
+        //  console.log(monProfil) //la section famille olf preferée
+         // si on a deja fait le quiz sinon rien
+
+         if (storedResult) {
+         console.log(storedResult); 
+           //je veux afficher dans mon profil la familleOlfactive issue du quiz:
+         
+             monProfil.innerHTML = `<h3>Famille Olfactive </h3> <p> D'apres le quiz , il semble que la famille olfactive ${storedResult}, soit la plus adaptée à tes gout </p>`
+         } else {
+         console.log('No quiz result stored');
+          // Display a default message or take other action
+          monProfil.innerHTML = `Faites le quiz pour decouvrir la famille olfactive que vous préferez`;// div vide
+         }
+    
+        // je veux que la propriété favoris et le nom d parfum en question
+        let favorisArray = perfumeList.map(perfume => ({ name: perfume.name, favoris: perfume.favoris }));
+        console.log(favorisArray);
+        // les favoris je beux les afficher dans la section mon profil
+        favorisArray.forEach(perfume => {
+            if (perfume.favoris) {
+            const favoritePerfumeElement = document.getElementById('mesParfumsPréferés');
+            console.log(favoritePerfumeElement)
+            favoritePerfumeElement.innerHTML = `<h3>Favorite perfume:</h3> ${perfume.name}
+    `;
+            }
+      });
+      
+    
+})
 
 

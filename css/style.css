@@ -1,275 +1,300 @@
 
 /*********************************MOBILE FIRST**********************/
 body{
-    margin:0;
-    scroll-behavior: smooth;
+  margin:0;
+  scroll-behavior: smooth;
 
- 
+
+}
+body h3, h2{
+color:#BC8340;
 }
 *{
-  font-family: 'Lora';
-    
+font-family: 'Lora';
+  
 }
 
 @font-face {
-  font-family: 'Lora';
-  src: url('assets/fonts/Lora-Italic-VariableFont_wght.ttf') format('ttf'),
-       /* url('assets/fonts/Lora-VariableFont_wght.ttf') format('truetype'); */
+font-family: 'Lora';
+src: url('assets/fonts/Lora-Italic-VariableFont_wght.ttf') format('ttf'),
+     /* url('assets/fonts/Lora-VariableFont_wght.ttf') format('truetype'); */
 }
 /*********************Navbar***************/
 .DesktopNavbar {
-    display: none;
+  display: none;
 
 
 }
 
 a {
-  text-decoration: none;
+text-decoration: none;
+color: black;
 }
 #navVerticale {
 
-        position: sticky;
-        top: 0;
-        list-style-type: none;
-        margin: 0;
-        padding: 14px 16px;
-        overflow: hidden;
-        background-color: #ECE5D1;
+      position: sticky;
+      top: 0;
+      list-style-type: none;
+      margin: 0;
+      padding: 14px 16px;
+      overflow: hidden;
+      background-color: #ECE5D1;
 } 
 /*menu de navigation  qui s'affiche lorsu'on click sur le burger*/
 #menuMobile{
-  display: none;
+display: none;
 }
 #navVerticale li{
-   display: grid;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-  }
-  #navVerticale a{
-    text-decoration: none;   
-  }
-  #navVerticale a:visited{
-    color: black;
-  }
-    ul {
-  
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        list-style-type: none;
-        margin: 0;
-        padding: 14px 16px;
-        overflow: hidden;
-        background-color: #ECE5D1;
-  }
+ display: grid;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+}
+#navVerticale a{
+  text-decoration: none;   
+}
+#navVerticale a:visited{
+  color: black;
+}
+  ul {
+
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      list-style-type: none;
+      margin: 0;
+      padding: 14px 16px;
+      overflow: hidden;
+      background-color: #ECE5D1;
+}
 /*///////////////////////////SECTION Accueil//////////////////////////::::*/
-  #Accueil{
-    display: grid;
-    justify-content: space-around;
-    height: 100Vh;
-    justify-items: center;
-    align-content: center;
-    text-align: center;
+#Accueil{
+  display: grid;
+  justify-content: space-around;
+  height: 100Vh;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  font-size: x-large;
+  background-image: url(https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+    text-shadow: 1px 1px 1px rgba(#15616D);
+}
+
+#Accueil p{
+  background-color: rgba(237, 229, 209, 0.2); /* Set a background color for the text */
+padding: 10px; /* Add some padding to the text */
+border-radius: 5px; /* Optional: Add rounded corners */
 }
 /*******button pour aller faire le quiz ********/
-  button#quizButton{
-    border-radius: 10px;
-    background-color: #15616D;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-weight: bold;
-  }
+button#quizButton{
+  border-radius: 10px;
+  background-color: #15616D;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+}
 /*/////////////////////////SECTION Catalogue////////////////////////////////////////:*/
 
 /**SECTION RESEARCH FILTER CONTAINER et barre de recherche*/
 
 .Research{
-  border-radius: 50px;
-  background-color:#ECE5D1;
-  display: flex;
-  justify-content: flex-end;
-  width: 50%;
-  padding: 2%;
+border-radius: 50px;
+background-color:#ECE5D1;
+display: flex;
+justify-content: flex-end;
+width: 50%;
+padding: 2%;
 }
 .Research img{
-  width: 15px;
-  height: 10px;
-  aspect-ratio: 1/1;
+width: 15px;
+height: 10px;
+aspect-ratio: 1/1;
 }
 .researchContainer{
- 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+display: flex;
+justify-content: center;
+align-items: center;
 }
 input{
-  border: none;
-  background-color: #ECE5D1;
-  width: 50%;
+border: none;
+background-color: #ECE5D1;
+width: 50%;
 }
 button#search{
-  background-color: #15616D;
-  border-radius: 50px;
-  border: none;
-  padding: 5%;
+background-color: #15616D;
+border-radius: 50px;
+border: none;
+padding: 5%;
 }
 #searchIcon{
-  color: white;
+color: white;
 }
 
 /*div filterContainer*/
 
 .filterContainer{
-  margin: 1%;
-  border-radius: 35px;
-  background-color: #ECE5D1;
-  display: grid;
-  justify-content: center;
-  justify-items: start;
-  padding: 10%;
-  display: none;
+margin: 1%;
+border-radius: 35px;
+background-color: #ECE5D1;
+display: grid;
+justify-content: center;
+justify-items: start;
+padding: 10%;
+display: none;
 }
 .filterContainer form{
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  
+display: grid;
+grid-template-columns: repeat(8, 1fr);
+
 }
 /*bouton pour appliquer les filtres*/
 .btnSectionSubmit{
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
+display: flex;
+justify-content: flex-end;
+width: 100%;
 }
 .btnSectionSubmit button{
-  background-color: #15616D;
-  border-radius: 35px;
-  border: none;
-  padding: 10px;
-  color: white;
-  
+background-color: #15616D;
+border-radius: 35px;
+border: none;
+padding: 10px;
+color: white;
+
 }
 /*****************liste (des parfums) container******************/
 
 .parfumListContainer{
-  display: grid;
-  justify-content: center;
+display: grid;
+justify-content: center;
 }
 
 .famillesOlfactive ul{ 
-  background-color: white;
+background-color: white;
 
 }
-  /********************************Card affichage parfum/article**********************************/
+/********************************Card affichage parfum/article**********************************/
 
-  .card {
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer; /* Ajout d'un curseur pour indiquer que l'élément est cliquable */
-  }
+.card {
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Ajout d'un curseur pour indiquer que l'élément est cliquable */
+}
 
-  .card img {
-    width: 100%;
-    height: auto;
-   aspect-ratio: 1/1;
-  }
+.card img {
+  width: 100%;
+  height: auto;
+ aspect-ratio: 1/1;
+}
 
-  .card-content {
-    padding: 16px;
-  }
+.card-content {
+  padding: 16px;
+}
 
-  .card-name {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
+.card-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
 
-  .card-description {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 16px;
-  }
+.card-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
 
-  .heart-icon {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    color: #ff0000;
-  }
+.heart-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: #ff0000;
+}
 /*** le bas de la card article */
-  .bottom-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: auto;
-    padding: 2%;
-  }
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+  padding: 2%;
+}
 
-  .product-description {
-    display: none;
-    max-width: 600px;
-    margin: 20px;
-  }
-  /***********button lire plus***********/
-  .lirePlusBtn{
-    background-color: #BC8340;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    padding: 5%;
-    width: 100px;
-    font-weight: bold;
-  }
+.product-description {
+  display: none;
+  max-width: 600px;
+  margin: 20px;
+}
+/***********button lire plus***********/
+.lirePlusBtn{
+  background-color: #BC8340;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 5%;
+  width: 100px;
+  font-weight: bold;
+}
 /*/////////////////////////////SECTION BLOG//////////////////////////////////////:***/
 #Blog{
-  padding: 1%;
+display: grid;
+padding: 22px;
+justify-items: start;
+}
+#Blog p, h2{
+margin-bottom: 20px;
 }
 
 
 /*/////////////////////////////SECTION Quiz//////////////////////////////////////:***/
 #Quiz{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 
 
 }
 .quizContainer{
-  width: 30%;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 30px;
-  padding: 3%;
-  background: #ECE5D1;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
+width: 30%;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+border-radius: 30px;
+padding: 3%;
+background: #ECE5D1;
+display: grid;
+justify-content: center;
+align-items: center;
+width: 60%;
 }
 /* h1{
-  font-size: xx-large;
+font-size: xx-large;
 } */
 .question{
-  font-weight: bolder;
-  font-size: x-large;
+font-weight: bolder;
+font-size: x-large;
 }
 .Reponses{
-  width: 90%;
+width: 90%;
 }
 option{
 
-  padding: 3%;
-  margin: 7%;
-  border-radius: 20px;
-  background-color:white;
+padding: 3%;
+margin: 7%;
+border-radius: 20px;
+background-color:white;
 }
 
-
-
+/*************************SECTION mon profil**************************************************/
+#MonProfil{
+height: 100vh;
+padding: 20px;
+}
 
 
 
@@ -278,98 +303,181 @@ option{
 
 /*/////////////////////////////SECTION Contact/////////////////////////////////////:***/
 
+.Coordonnées {
+font-size: larger;
+width: 330px;
+background-color:#ECE5D1;
+display: grid;
+justify-content: center;
+}
+
+.adresse {
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+.reseaux {
+margin-top: 20px;
+}
+
+.reseaux a {
+text-decoration: none;
+margin-right: 10px;
+color: #333;
+font-size: 18px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.reseaux i {
+margin-right: 5px;
+}
 
 
+/*/////////////////////////////SECTION Contact/////////////////////////////////////:***/
 
-/*/////////////////////////////SECTION MonProfil/////////////////////////////////////:***/
+.Contact {
+display: flex;
+align-items: center;
+height: 100vh;
+margin: 0;
+flex-direction: column;
+justify-content: space-evenly;
+}
+.Contact form {
+padding: 10px;
+text-align: center;
+background-color: #ECE5D1;
+      }
+.Contact input, textarea {
 
+padding: 6px;
+background-color: white;
+display: grid;
+width: 300px;
+margin: 10px auto;
+margin-bottom: 33px;
+      }
 
+.Contact  textarea{
+height: 150px;
+}
+.Contact button{
+padding: 10px;
+border: none;
+border-radius: 9px;
+background-color: #BC8340;
+color: white;
+}
 
-
+/************************SCROLL up Button**************************/
+#btn-back-to-top {
+  color: white;
+  /* font-size: 12px; */
+  padding: 14px;
+  background-color: #BC8340;
+  border-radius: 13px;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
 
 
 
 
 /***************************************DESKTOP**************************************************/
 @media only screen and (min-width: 900px) {
-    .DesktopNavbar{
-        display: block;
-    
-    }
-    .mobileFirst{
-        display: none;
-    }
+  .DesktopNavbar{
+      display: block;
+  
+  }
+  .mobileFirst{
+      display: none;
+  }
 
-    body{
-        margin:0;
-        scroll-behavior: smooth;
-        
-    }
+  body{
+      margin:0;
+      scroll-behavior: smooth;
+      
+  }
 
-    /*************Nav bar *************/
+  /*************Nav bar *************/
 ul {
+
+ 
+      position: fixed; 
+      width: 100vw;
+      top: 0;
   
-        position: -webkit-sticky;
-        position: sticky; /*!!!!!!!tu peux faire fixed mais attention la tu prend les ul aussi du blog*/
-        top: 0;
-    
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #ECE5D1;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  ul li a:hover:not(.active) {
-    background-color: #15616D;
-    color: white;
-  }
-  
-  .active {
-    color: #BC8340;
-    font-weight: bolder;
-  }
-  /*******************************Accueil************************************************/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ECE5D1;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover:not(.active) {
+  background-color: #15616D;
+  color: white;
+}
+
+.active {
+  color: #BC8340;
+  font-weight: bolder;
+}
+/*******************************Accueil************************************************/
 
 /******************************Catalogue**************************************************/
 .Research{
-  width: 40%;
-  padding: 1%;
+width: 40%;
+padding: 0%;
+margin: 10px;
 }
 
 input{
-  
-  width: 50%;
-  text-size-adjust: auto;
+
+width: 50%;
+text-size-adjust: auto;
 }
 
 .filterContainer{
-  padding: 1%;
+padding: 1%;
 }
 .filterContainer form{
-  width: 90%;
+width: 90%;
 } /*section filtres*/
 
 .parfumListContainer{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+display: grid;
+grid-template-columns: repeat(4, 1fr);
 } /*afficher les parfums en plusieurs colonnes  */
+
+
+/****************************Section Contat*************************************/
+.Contact {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+}
 }
 
 
-  
 
 
 
@@ -377,26 +485,26 @@ input{
 
 /*///////////////////////////////TABLET////////////////////////*/
 @media only screen and (min-width:700px )and (max-width:900px){
-  .DesktopNavbar{
-    display: block;
+.DesktopNavbar{
+  display: block;
 
 }
 .mobileFirst{
-    display: none;
+  display: none;
 }
 
 body{
-    margin:0;
-    scroll-behavior: smooth;
-    
+  margin:0;
+  scroll-behavior: smooth;
+  
 }
 
 /*************Nav bar *************/
 ul {
 
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 
 list-style-type: none;
 margin: 0;
