@@ -3,11 +3,13 @@
 body{
   margin:0;
   scroll-behavior: smooth;
-
-
 }
 body h3, h2{
 color:#BC8340;
+}
+section{
+  margin-left: 5px ;
+  margin-right: 5px;
 }
 *{
 font-family: 'Lora';
@@ -130,7 +132,8 @@ button#search{
 background-color: #15616D;
 border-radius: 50px;
 border: none;
-padding: 5%;
+padding: 15px;
+margin: 8px;
 }
 #searchIcon{
 color: white;
@@ -258,8 +261,6 @@ margin-bottom: 20px;
 display: flex;
 justify-content: center;
 align-items: center;
-
-
 }
 .quizContainer{
 width: 30%;
@@ -272,9 +273,7 @@ justify-content: center;
 align-items: center;
 width: 60%;
 }
-/* h1{
-font-size: xx-large;
-} */
+
 .question{
 font-weight: bolder;
 font-size: x-large;
@@ -283,11 +282,14 @@ font-size: x-large;
 width: 90%;
 }
 option{
-
 padding: 3%;
 margin: 7%;
 border-radius: 20px;
 background-color:white;
+}
+option:hover{
+  color: white;
+  background-color: #BC8340;
 }
 
 /*************************SECTION mon profil**************************************************/
@@ -295,11 +297,6 @@ background-color:white;
 height: 100vh;
 padding: 20px;
 }
-
-
-
-
-
 
 /*/////////////////////////////SECTION Contact/////////////////////////////////////:***/
 
